@@ -35,6 +35,6 @@ send_quote = (message, location, response_handler)->
     $ = cheerio.load(body)
     el = $(".post .center a").first()
     txt = he.decode el.text()
-    link = he.decode el.href()
+    link = el.attr('href')
 
     response_handler "#{txt} [#{link}]"
