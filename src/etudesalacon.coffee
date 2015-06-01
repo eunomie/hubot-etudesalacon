@@ -33,7 +33,7 @@ send_quote = (message, location, response_handler)->
       return send_quote(message, location, response_handler)
 
     $ = cheerio.load(body)
-    el = $(".post .center a").first()
+    el = $(".post .centre a").first()
     txt = he.decode el.text()
     link = el.attr('href')
 
